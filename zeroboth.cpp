@@ -4,9 +4,9 @@
 
 using namespace std;
 // this function uses call by reference to assign two variables to 0
-void zeroBoth(int *var1, int *var2){
-  *var1 = 0;
-  *var2 = 0;
+void zeroBoth(int& var1, int& var2){
+  var1 = 0;
+  var2 = 0;
 }
 
 int main(int argc, char **argv){
@@ -18,7 +18,7 @@ int main(int argc, char **argv){
   cout << "Enter second number" << endl;
   cin >> userNum2;
   // this runs the function
-  zeroBoth(&userNum1,&userNum2);
+  zeroBoth(userNum1,userNum2);
 
   cout << userNum1 << " " << userNum2 << endl;
 }
